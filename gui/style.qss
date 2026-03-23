@@ -1,0 +1,203 @@
+/* Тема "VS Code Dark" - как любимая IDE */
+
+/* Основное окно */
+QMainWindow {
+    background-color: #1e1e1e;
+}
+
+/* Центральный виджет */
+QWidget#centralWidget {
+    background-color: #1e1e1e;
+}
+
+/* Поле истории сообщений */
+QTextEdit#historyEdit {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border: 1px solid #3c3c3c;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13px;
+    padding: 10px;
+    selection-background-color: #264f78;
+    selection-color: #ffffff;
+}
+
+QTextEdit#historyEdit:focus {
+    border-color: #007acc;
+}
+
+/* Скроллбар в стиле VS Code */
+QScrollBar:vertical {
+    background-color: #1e1e1e;
+    width: 14px;
+    border: none;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #424242;
+    border-radius: 7px;
+    min-height: 30px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #4f4f4f;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: #1e1e1e;
+    height: 14px;
+    border: none;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #424242;
+    border-radius: 7px;
+    min-width: 30px;
+    margin: 2px;
+}
+
+/* Поле ввода */
+QLineEdit#inputField {
+    background-color: #3c3c3c;
+    color: #cccccc;
+    border: 1px solid #3c3c3c;
+    border-radius: 2px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13px;
+    padding: 8px 12px;
+    selection-background-color: #264f78;
+}
+
+QLineEdit#inputField:focus {
+    border-color: #007acc;
+    background-color: #3c3c3c;
+}
+
+QLineEdit#inputField::placeholder {
+    color: #6a6a6a;
+    font-style: normal;
+}
+
+/* Кнопки в стиле VS Code */
+QPushButton {
+    background-color: #0e639c;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-weight: normal;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background-color: #1177bb;
+}
+
+QPushButton:pressed {
+    background-color: #0d5b8e;
+}
+
+QPushButton:disabled {
+    background-color: #2a2a2a;
+    color: #6a6a6a;
+}
+
+/* Кнопка "Слушать" - оранжевый акцент как у VS Code Live Server */
+QPushButton#listenBtn {
+    background-color: #c45b1e;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 50px;
+}
+
+QPushButton#listenBtn:hover {
+    background-color: #d46b2e;
+}
+
+QPushButton#listenBtn:pressed {
+    background-color: #b04e1a;
+}
+
+/* Кнопка "Отправить" - зелёный как кнопка Run */
+QPushButton#sendBtn {
+    background-color: #2d732d;
+}
+
+QPushButton#sendBtn:hover {
+    background-color: #3d8e3d;
+}
+
+QPushButton#sendBtn:pressed {
+    background-color: #1e5a1e;
+}
+
+/* Сообщения в истории */
+.message-user {
+    color: #9cdcfe;
+    margin: 8px 0;
+    padding: 4px 8px;
+    border-left: 3px solid #007acc;
+    background-color: #2a2a2a;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.message-assistant {
+    color: #ce9178;
+    margin: 8px 0 8px 20px;
+    padding: 4px 8px;
+    border-left: 3px solid #ce9178;
+    background-color: #2a2a2a;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.message-system {
+    color: #6a9955;
+    margin: 8px 0;
+    padding: 4px 8px;
+    border-left: 3px solid #6a9955;
+    background-color: #2a2a2a;
+    font-style: italic;
+}
+
+.message-error {
+    color: #f48771;
+    margin: 8px 0;
+    padding: 4px 8px;
+    border-left: 3px solid #f48771;
+    background-color: #2a2a2a;
+    font-weight: bold;
+}
+
+/* Индикатор прослушивания (как статус бар VS Code) */
+.listening-indicator {
+    color: #007acc;
+    font-weight: bold;
+    background-color: #2a2a2a;
+    padding: 4px;
+    border: none;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; background-color: #1e3a5f; }
+    100% { opacity: 1; }
+}
+
+/* Полоса статуса (нижняя часть) */
+QStatusBar {
+    background-color: #007acc;
+    color: #ffffff;
+}
+
+/* Разделители */
+QFrame[frameShape="4"] {  /* HLine */
+    color: #3c3c3c;
+}
